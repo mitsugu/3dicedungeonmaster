@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>3 ダイス・ダンジョン・マスター</title>
+	<style>
+	div.contents {
+		width:80%;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	h2, h3 {
+		margin-bottom:0em;
+	}
+	ul {
+		margin-top:0em;
+	}
+	ul li p {
+		margin-top:0em;
+		margin-bottom:0em;
+	}
+	p.credit, p.map {
+		margin-top:0em;
+		margin-bottom:0em;
+	}
+	p.add-margin-top {
+		margin-top:1em;
+	}
+	table.force_essence td {
+		width:6em;
+		text-align:center;
+	}
+	table.map td {
+		width:16em;
+	}
+	table.map td:nth-child(1) {
+		width:4em;
+		text-align:center;
+	}
+	table.number_of_monster td:nth-child(1) {
+		text-align:center;
+	}
+	table.number_of_monster td:nth-child(2) {
+		padding-left:2em;
+	}
+	table.maptable td:nth-child(1) {
+		width:4em;
+		text-align:center;
+	}
+	table.maptable td:nth-child(1)~td {
+		padding-left:2em;
+	}
+	table.bodytable td:nth-child(1) {
+		width:4em;
+		text-align:center;
+	}
+	table.bodytable td:nth-child(1)~td {
+		padding-left:2em;
+	}
+	table.mindtable td:nth-child(1) {
+		width:4em;
+		text-align:center;
+	}
+	table.mindtable td:nth-child(1)~td {
+		padding-left:2em;
+	}
+	table.spellscroll td:nth-child(1) {
+		width:4em;
+		text-align:center;
+	}
+	table.spellscroll td:nth-child(1)~td {
+		padding-left:2em;
+	}
+	table.artifacttable td:nth-child(1) {
+		width:4em;
+		text-align:center;
+	}
+	table.artifacttable td:nth-child(2) {
+		width:8em;
+	}
+	table.artifacttable td:nth-child(1)~td {
+		padding-left:2em;
+	}
+	</style>
+</head>
+<body>
+<div class="contents">
+	<h1>3 ダイス・ダンジョン・マスター</h1>
+	<h2>3 ダイス・ダンジョン・マスターとは</h2>
+	<p class="credit">3 ダイス・ダンジョン・マスターは、“RPG ソリティア・チャレンジ: 3 ダイス” のルールを拡張した 3 ダイス・ダンジョンを再拡張したローグライク RPG です。</p>
+	<ul class="credit">
+		<li>
+			<p>RPG ソリティア・チャレンジ: <b>3 ダイス</b></p>
+			<p class="credit">2011年1月2日 <b>ロビン・V・ステイシー </b>(別名グレイウルフ) 著</p>
+			<p class="credit"><a href="https://web.archive.org/web/20111012030059/http://greywulf.net/2011/01/rpg-solitaire-challenge-3-dice/">https://web.archive.org/web/20111012030059/http://greywulf.net/2011/01/rpg-solitaire-challenge-3-dice/</a></p>
+			<p></p>
+		</li>
+		<li>
+			<p><b>3 ダイス・ダンジョン:</b> ダンジョン探索ソリティア・ゲーム</p>
+			<p>2011年12月29日 <b>ブレント・P・ニューホール</b>著</p>
+			<p><b>3 ダイス・ダンジョン</b>は、“RPG ソリティア・チャレンジ: <b>3 ダイス</b>” のルールを拡張したものです。</p>
+			<p><a href="http://rpg.brentnewhall.com/2011/12/3-dice-dungeon-a-solitaire-dungeon-crawl-game/">http://rpg.brentnewhall.com/2011/12/3-dice-dungeon-a-solitaire-dungeon-crawl-game/</a></p>
+		</li>
+		<li>
+			<p><b>3 ダイス・ダンジョン・マスター</b></p>
+			<p>2020年12月10日 ウィリアム・カデル著</p>
+			<p><a href="https://preview.drivethrurpg.com/en/product/374518/3-Dice-Dungeon-Master">https://preview.drivethrurpg.com/en/product/374518/3-Dice-Dungeon-Master</a></p>
+		</li>
+	</ul>
+
+	<h2>用意するもの</h2>
+	<ul>
+		<li>このルールブック</li>
+		<li>紙 (方眼タイプ推奨)</li>
+		<li>ペンなどの筆記用具</li>
+		<li>ダイス 3 個 (3 個なければ 1 個でもプレイ可能)</li>
+	</ul>
+
+	<h2>キャラクター作成</h2>
+	<p>キャラクター シートの上部にある 3 つのボックス、名前、攻撃法、アーキタイプは何でもよく、ゲームにメカニカルな影響はありません。攻撃法は戦闘を定義する方法です。</p>
+	<p>あなたの 3 つのステータスは、Body、Mind、Heart です。Body はあなたの肉体的な力を表します。Mind はあなたの精神的な力です。Heart は、ほとんどのゲームでヒットポイントと呼ばれるものです。それはあなたの生命力であり、あなたの Body と Mind の組み合わせです。</p>
+	<p>Body と Mind は、Force (ヒットボーナス) と Essence (HP ボーナス) の 2 つの異なる数値に分けられます。Force は何かを攻撃するときの力であり、Essence は Heart ポイントに追加される値です。</p>
+	<p>どのような攻撃を行うかはあなた自身が決定し、想像力に委ねられます。Body Force は、剣の盾や鎧、あるいは武道の僧侶など、思いつく限りのあらゆるものになる可能性があります。Mind Force で攻撃する場合、それは魔法攻撃、超能力、または気力になる可能性があります。繰り返しになりますが、想像できるものは何でも。</p>
+	<p>Force と Essence を決めるのには以下の 3 つの方法があります。</p>
+	<ul>
+		<li>Body の 3d6 と Mind の 3d6 をそれぞれロールして、下のテーブルにある Force と Essence を取得します。</li>
+		<li>あるいは 4d6 をロールし、結果の上位側 3 つの値を Body または Mind の片方に、結果の下位側 3 つの値を Body または Mind のもう片方に割り当てることにより、Body と Mind の値を決めることもできます。<br>一部のゲームでは、これを有利/不利によるロールと呼びます。<br>Body または Mind のどちらかのスコアが高くなる可能性が高く、もう一方のスコアが低くなる可能性は高くなりますが、そうならない可能性もあります。</li>
+		<li>または、6d6 をロールして、それぞれに 3 つのサイコロを割り当てることもできます。この方法では、キャラクターをどのようにしたいかをほとんどコントロールできます。</li>
+	</ul>
+	<p>Heart は Body Essence ＋ Mind Essence ＋ 6 ＋ 1d6 です。Essence は HP ボーナスです。</p>
+	<table class="force_essence">
+	<tbody>
+		<tr>
+			<th>ダイス</th>
+			<th>Force</th>
+			<th>Essence</th>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>ｰ4</td>
+			<td>-3</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>-3</td>
+			<td>-3</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>-3</td>
+			<td>-2</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>-2</td>
+			<td>-2</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>-2</td>
+			<td>-1</td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td>-1</td>
+			<td>-1</td>
+		</tr>
+		<tr>
+			<td>9</td>
+			<td>-1</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>0</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td>11</td>
+			<td>1</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td>12</td>
+			<td>1</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>13</td>
+			<td>2</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>14</td>
+			<td>2</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>15</td>
+			<td>3</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>16</td>
+			<td>3</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>17</td>
+			<td>4</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>18</td>
+			<td>4</td>
+			<td>4</td>
+		</tr>
+	</tbody>
+	</table>
+	<!--
+	There will be items that add points to Body or Mind. If this increases the Passive bonus, add that to Heart. Note that every increase will give you a bonus in either Force or Essence.
+	-->
+	<p>Body または Mind にポイントを追加するアイテムがあります。これによりポイントがが増加する場合は、それを Heart に追加します。増加するたびに、Force または Essence のいずれかにボーナスが与えられることに注意してください。</p>
+
+	<h2>マップの生成</h2>
+	<p>3 つのサイコロを振って各ロケーションを作成します。DM の役割を果たし、各カラムに 3 つの出目のうちどれを入れるかを選択します。</p>
+	<table class="map">
+	<tbody>
+		<tr>
+			<th>ダイス</th>
+			<th>ロケーション</th>
+			<th>モンスター</th>
+			<th>財宝</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>小部屋 (1 出口)</td>
+			<td>ドラゴン (T#7+lvl、dam*lvl)</td>
+			<td>なし</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>大部屋 (1d2 出口)</td>
+			<td>ジャイアンツ (T#5+lvl、1d2)</td>
+			<td>治癒ポーション (1d6+lvl)</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>倉庫 (1d3 出口)</td>
+			<td>オーガ (T#4+lvl、1d3)</td>
+			<td>Body テーブル</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>廊下 (両端の出口)</td>
+			<td>オーク (T#3+lvl、1d6)</td>
+			<td>Mind テーブル</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>寺院 (1d6 出口)</td>
+			<td>ゴブリン (T#2+lvl、1d6)</td>
+			<td>呪文の巻物</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>大ホール (1d6+1 出口)</td>
+			<td>なし</td>
+			<td>マップ</td>
+		</tr>
+	</tbody>
+	</table>
+	<p class="map"><b>lvl:</b> ダンジョンのレベルです。下層に 1 階層降りるほどレベルが 1 つ高くなります。初期値は 1 です。</p>
+	<p class="map"><b>T#:</b> ターゲットナンバーです。モンスターの HP を表しています。</p>
+	<p class="map"><b>dam*lvl:</b> ダンジョンレベルダメージ倍率です。このモンスターから Heart にダメージを受けると、そのダメージは自分がいる<b>ダンジョンレベルの数値倍</b>になります。</p>
+	<p class="map"><b>1d2, 1d3,または 1d6:</b> ダイスタイプダメージ倍率です。モンスターの数を表しています。ダンジョンのレベルに応じて、必要な回数だけサイコロを振ります。</p>
+	<p class="map"><b>治癒ポーションの 1d6+lvl:</b> 治癒ポーションの治癒力です。1d6 の出目にダンジョンレベルの値を加えます。</p>
+	<p><b>マッピング:</b> このロケーションを紙に描きます。各ロケーションはマップ全体でほぼ同じスペースを占め、東西南北に出口を持つことができます。出口には論理的整合性を持ってマークを付けなければなりません (出口は隣接するロケーションの入り口に接していなければなりません)。それ以外の場合出口はどこにでも指定できます。</p>
+	<p><b>出口:</b> 各部屋の出口の数には、あなたが入ってきた出口も含まれます。廊下には入口と出口が 1 つずつあります。またその部屋は行き止まりかもしれません。出口がない場合は失敗したことになり、入ってきた道を引き返さなければなりません。ミッションの目標を達成する前に部屋を逃げ出した場合は、経験値 (XP) は得ますが、勝利するまでその経験値を使用することはできません。</p>
+	<!--
+	Attacking: If the room contains a monster, you can attack it. Pick a stat, Body or Mind, and roll 1d6. Add the Force of that stat to that number. If you roll T#(target number, the difficulty of the Monster) or more, you hit! Damage equals 1 for every pip over T#. The monsters HP is equal to it’s T#. When a monster’s T# is 0, it is defeated. Damage does not carry over to the next monster, after one is defeated. If you roll less than the attribute, the monster hits you; increase damage taken by 1 for each point under the T#. Find the closest Dice type on the table below, roll that and multiply your damage taken by that to see how many monsters hit you. A roll of 1 can still hurt the monsters, if you add over the T#, and you take 1 damage.
+	-->
+	<p><b>攻撃:</b> 部屋にモンスターがいる場合、モンスターを攻撃することができます。Body または Mind のステータスを選択し、1d6 をロールします。“ロールの出目 + Force” があなたの攻撃力です。攻撃力が T# (モンスターの HP) 以上であればモンスターに攻撃がヒット！あなたが与えるダメージは “攻撃力 -T#” です。モンスターの T# が 0 以下になると、そのモンスターは敗北します。モンスターを倒した場合、あなたのダメージは次のモンスターに引き継がれずリセットされます。あなたの攻撃力 (ロールの出目 + Force) がその属性の値よりも少ない場合、モンスターがあなたを攻撃します。あなたが受けるダメージは “T# - 攻撃力” になります。下の表から最も近いダイスの種類を探し、そのダイスを振り、自分の受けるダメージにそのダイスタイプダメージ倍率を掛けることで、何体のモンスターの攻撃が自分に命中したのかを知ることができます。</p>
+	<table class="number_of_monster">
+	<tbody>
+		<tr>
+			<th>部屋にいる<br>モンスターの最大数</th>
+			<th>ダイスタイプダメージ倍率を得る方法</th>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>1d2 (1d6 をロールし、奇数は 1、偶数は 2 として数える)</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>1d3 (1d6 をロールし、1〜3は出た目を 4〜6 は 3 を減算して数える)</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>1d6 (4 を超えるサイコロの出目は 4 として数える)</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>1d6 (5 を超えるサイコロの出目は 5 として数える)</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>1d6 (出目をそのまま数える)</td>
+		</tr>
+	</tbody>
+	</table>
+
+
+	<p>ドラゴンの場合を除き、おおよそ、部屋内のモンスターの数が減るにつれて、あなたが受けるダメージは減少します。彼のダメージのポテンシャルは同じです<b>(どういう意味？);</b>。</p>
+	<p><b>クリティカル:</b> 攻撃時に 6 が爆発します。これは、6 をロールしたら、再度ロールして、攻撃の合計に加算します。さらに 6 であれば、ロールを続けます。</p>
+	<!--
+	Once a location’s monster is defeated, you get the location’s treasure, and 1d6 gp if there is at least one monster in the room. Every 6 rolled for gp can be exploded.
+	-->
+	<p>ロケーションのモンスターを倒すと、そのロケーションの財宝と、部屋に少なくとも 1 匹のモンスターがいる場合は 1d6 GP (ゲームポイント) を獲得し。GP のためのロールでも 6 は爆発します。</p>
+
+	<h3>マップテーブル</h3>
+	<table class="maptable">
+	<tbody>
+		<tr>
+			<th>ダイス</th>
+			<th>アイテム</th>
+			<th>説明</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>秘密の扉</td>
+			<td>この部屋にドアをもう 1 つ追加します。</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>安全な空間</td>
+			<td>休んで回復してください。</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>秘密のトンネル</td>
+			<td>街までちょっと行って、この場所に戻ってきます。</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>階段を登る</td>
+			<td>ダンジョンのレベルが 1 下がります。</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>階段を下りる</td>
+			<td>ダンジョンのレベルが 1 上がります。</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>埋蔵金</td>
+			<td>アーティファクトテーブルの上に転がります。</td>
+		</tr>
+	</tbody>
+	</table>
+	<p>治癒のポーション — Heart を 1d6 増加させます。これは一時的なポイントとして最大値を超える場合があります。</p>
+
+	<h3>Body テーブル</h3>
+	<table class="bodytable">
+	<tbody>
+		<tr>
+			<th>出目</th>
+			<th>アイテム</th>
+			<th>ボーナス</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>シールド</td>
+			<td>+1 Heart</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>遠距離武器</td>
+			<td>戦闘前に 1 回攻撃</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>武器</td>
+			<td>ボディ攻撃へのダメージ +1</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>鎧</td>
+			<td>+1 Body</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>アーマーオイル</td>
+			<td>1 つのアーマーに +1</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>砥石</td>
+			<td>1 つの武器に +1</td>
+		</tr>
+	</tbody>
+	</table>
+
+	<h3>Mind テーブル</h3>
+	<table class="mindtable">
+	<tbody>
+		<tr>
+			<th>出目</th>
+			<th>アイテム</th>
+			<th>ボーナス</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>魔法の集中/使い魔</td>
+			<td>+1 Heart</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>魔法の杖</td>
+			<td>戦闘前に 1 回攻撃</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>ウィザードハット</td>
+			<td>精神攻撃ダメージ +1</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>ウィザードローブ</td>
+			<td>+1 Mind</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>巻物の強化</td>
+			<td>1 マジックに +1</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>キーンのポーション</td>
+			<td>1 つのウィザード武器に +1</td>
+		</tr>
+	</tbody>
+	</table>
+
+	<h3>呪文の巻物/1 回使用</h3>
+	<table class="spellscroll">
+	<tbody>
+		<tr>
+			<th>出目</th>
+			<th>呪文</th>
+			<th>効果</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>マジックミサイル</td>
+			<td>ターゲットに 1d6*(lvl/2) ダメージ。</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>眠り</td>
+			<td>1d6+lvl T# が影響を受けます。モンスターは 1体のみ。</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>深堀り</td>
+			<td>埋もれた宝を見つけるか（タイプは 1d6 ロール）、または部屋からの出口を作成します。</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>ライトニングボルト</td>
+			<td>ターゲット 1 体に 3d6+lvl ダメージ</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>ファイヤーボール</td>
+			<td>1d6 のターゲットに 1d6+lvl のダメージ。</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>チャーム</td>
+			<td>1d6*lvl をロールして仲間にします。<br>ターゲット数はモンスターの T# とターゲットの数を掛けたものに等しくなります。全部か、何もないか。</td>
+		</tr>
+	</tbody>
+	</table>
+	<p>仲間とペットは将来の拡張で拡張される予定です。その間、彼らは部屋にあるすべての宝物と、彼ら自身の金やアイテムをあなたに与えます。</p>
+	<p>未使用のアイテムは、1 GP × pip で街で販売できます。</p>
+
+	<h2>XP</h2>
+	<p>モンスターを倒したとき（またはロケーションにモンスターがいない場合）、そのロケーション（部屋、モンスター、財宝）に対して振られた 3d6 のすべての値を合計します。これを XP (経験値) の合計に加えます。</p>
+	<!--
+	Between maps, you can pay for training. One XP costs 1 gp. This includes upgrades to equipment as well as improving skills. You don’t get to spend your XP unless you have won the level. If you run out of doors, you have to retreat.
+	-->
+	<p>マップ間ではトレーニング料金を支払うことができます。1 XP のコストは 1 GP です。これには、スキルの向上だけでなく、装備のアップグレードも含まれます。レベルに勝利しない限り、XP を使うことはできません。ドアがなくなったら退却しなければなりません。</p>
+	<!--
+	Leveling Up: It costs 50 XP times current level to make the next level. When you level up, gain 1d6 + Essences to Heart max.
+	-->
+	<p>レベルアップ: 次のレベルにするには、現在のレベルの 50 XP 倍のコストがかかります。レベルアップすると、1d6 + Heart Essence を最大まで獲得します。</p>
+	<p><b>寺院:</b> 寺院への最初の訪問時に、1 HP に対して 10 GP を寄付できます。</p>
+	<p><b>勝利:</b> このレベルでアーティファクトを 1 つ収集し、ボスのドラゴンを倒した後、大広間の出口を見つけます。街に戻ってダメージポイントを回復し、トレーニングすることができます。戻ってきたら、元のレベルに留まるか、準備ができていれば次のダンジョンレベルに進むことができます。</p>
+
+	<h3>アーティファクトテーブル</h3>
+	<table class="artifacttable">
+	<tbody>
+		<tr>
+			<th>出目</th>
+			<th>アイテム</th>
+			<th>説明</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>鋭さのオイル</td>
+			<td>1 つの武器の爆発力が 1 向上します。</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>若返りの泉</td>
+			<td>すべての HP を再ロールし、スコアが高ければ、それを新しい HP として受け取ります。</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>運動マニュアル</td>
+			<td>3d6 をロールする。このスコアが現在の Body (アイテムをカウントしない) より高い場合、これを新しいボディとして採用します。</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>明晰な思考の書</td>
+			<td>3d6 をロールする。このスコアが現在の Mind （アイテムをカウントしない）より高い場合、これを新しいマインドとして採用します。</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>魔法の本</td>
+			<td>1d6 の確率で、見つかった巻物から呪文を転写します。T# 7 +と 呪文値 (呪文値は呪文を獲得した 1d6 ロール上の数字です)。</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>3 つの願いの指輪</td>
+			<td>何かに +1、ターゲット 1 つを破壊、トレーニングアップ 1、6d6 GP、または任意のアイテム (アーティファクトを除く) を獲得します。</td>
+		</tr>
+	</tbody>
+	</table>
+	<p>アーティファクトは販売できません。</p>
+</div>
+</body>
+</html>
+
